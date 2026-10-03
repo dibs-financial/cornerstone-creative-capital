@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "company-brain-evaluation": {
+      "source": "day-ai/company-brain-evaluation",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "586270f4fc0ebc67a878871d0993e0994c90b9f633149b93b2c7651651e21041"
+    }
+  }
+}
