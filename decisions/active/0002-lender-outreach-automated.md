@@ -59,7 +59,8 @@ limits.
    tool, a reply, a call) puts the lender on the stop list in every tool, for
    good.
 7. **Clean data first.** No lender is emailed until their row passes the
-   Listed entry check: valid email, a real first name, no duplicate.
+   Listed entry check: valid email, a usable greeting (a real first name or
+   the approved company greeting), no unresolved duplicate.
 8. **Order.** WHALE, then SHARK, GATOR, MINNOW, SMALL.
 9. **Counsel first.** No automated send until counsel confirms that outreach
    to individual lenders about capital doesn't need securities filings or
