@@ -409,7 +409,7 @@ Create in this repo:
   **Deals funded = deals that entered Funded this period.** That definition is
   the Monday number.
 
-**GATE:** you've read and approved `stages.md` (done, 2026-10-03) and `0001` (pending).
+**GATE:** you've read and approved `stages.md` (done, 2026-10-03) and `0001` (written 2026-10-03; approved on merge of its PR).
 
 ### Step 2: Privacy rules, written before any source connects (Oct 7–8)
 
