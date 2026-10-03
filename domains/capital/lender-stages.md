@@ -7,6 +7,7 @@ date: 2026-10-03
 source: founder approval, Claude Code session
 supersedes: none
 review_by: 2027-01-04
+amended: 2026-10-03 (founder) — Listed accepts a company greeting when no first name is known
 related: [domains/lending/stages.md, decisions/active/0002-lender-outreach-automated.md, governance/data-classification.md]
 ---
 
@@ -17,7 +18,7 @@ so a new hire, or an agent, can place a lender correctly without asking.
 
 | Stage | Enters when | Leaves when | Stale after |
 | --- | --- | --- | --- |
-| **Listed** | On the PML list with clean data (valid email or phone, real first name) | Contacted | — |
+| **Listed** | On the PML list with clean data: valid email or phone, no unresolved duplicate, and a usable greeting (a real first name, or for a company row the approved company greeting "Hi [Company] team,") | Contacted | — |
 | **Contacted** | First outreach sent, or a call made for CALL FIRST lenders | Replied, Unsubscribed, or 3 touches without a reply | 21 days |
 | **Replied** | Any human reply (auto-replies and out-of-office don't count) | Qualified, or Not interested | 3 days without the founder's answer |
 | **Qualified** | Criteria on file: states, loan types (EMD, gap), size range, terms, how they fund | Active | 14 days |
@@ -36,6 +37,16 @@ so a new hire, or an agent, can place a lender correctly without asking.
   is not a confirmation.
 - **Criteria** live on the lender's record in the brain (Confidential), never
   in this repo. Each one cites its source thread or call.
+
+## Greetings
+
+- A person's row uses their first name: "Hi Maria,".
+- A company row with no known person uses "Hi [Company] team," with a
+  trailing "LLC" dropped ("Hi GPM101 team,").
+- A name suggested by inference (for example from an email address or an
+  initial) is never used until the founder confirms it.
+- When a reply reveals the person's name, the record switches to their first
+  name for every later email.
 
 ## Update modes
 
