@@ -26,7 +26,8 @@ and no exclusion rule.
 | --- | --- | --- |
 | I-1 | Label | `Cornerstone` — anything the founder labels this |
 | I-2 | Domain | Escrow and title companies on file — *list below* |
-| I-3 | Domain / address | Capital partners, repeat borrowers, wholesalers on file — *list below* |
+| I-3 | Domain / address | Private money lenders (PMLs) and other capital partners: business domains in `partner_domains` below; individual personal-provider addresses (Gmail, Yahoo, etc.) matched against the **PML list**, held in the brain and never committed here |
+| I-3b | Address | Repeat borrowers and wholesalers on file — *list below* |
 | I-4 | Content | New senders whose message asks for EMD, earnest money, gap funding, or a loan for a property purchase (feeds `new-request-triage`) |
 | I-5 | Content | Any message containing wire, routing, or account instructions (feeds `wire-instruction-check`; handled as Restricted) |
 | I-6 | Thread | Every reply in a thread that was already included |
@@ -38,7 +39,7 @@ and no exclusion rule.
 | X-1 | Label | `Personal` |
 | X-2 | Label | `DIBS` — until `domains/dibs/README.md` says otherwise |
 | X-3 | Label | `Legal` — counsel correspondence stays out |
-| X-4 | Domain | Personal contacts and family — *list below* |
+| X-4 | Address | Personal contacts and family — *list below*. Never exclude a whole personal-provider domain (gmail.com etc.): half the PML list uses one |
 | X-5 | Sender type | Bank, brokerage, card, and payment-app notifications (statements, alerts, 2FA codes) |
 | X-6 | Sender type | Newsletters, marketing, receipts, social media |
 | X-7 | Attachment | Borrower ID scans, bank statements, credit reports, tax returns (Regulated). The thread may enter; **the attachment content does not** |
@@ -48,7 +49,100 @@ and no exclusion rule.
 
 ```yaml
 escrow_and_title_domains: []    # e.g. sometitle.com
-partner_domains: []             # capital partners
+partner_domains:                # PML business domains — source: PML-lenders-for-bots.csv (185 lenders, 2026-10-03)
+  - 3dcapital.me
+  - 4ksconsulting.com
+  - abetterconnecter.com
+  - aethersmithventures.com
+  - alliancesquad.com
+  - ambenterprisegroup.com
+  - ampmgroupenterprisellc.com
+  - arrowheadcapitalfunding.com
+  - axiominvesting.us
+  - bartsbucks.com
+  - bhcreatorsolutions.com
+  - boomerangair.com
+  - bridgetoscale.com
+  - brollyjv.com
+  - campbellridgehomes.com
+  - centerfieldventuresllc.com
+  - chatcyreale.com
+  - chimbacapital.com
+  - cmventuresolutions.com
+  - consultwithbeacon.com
+  - creativecashpartners.com
+  - creativedealfunding.com
+  - ekconsultinggroupllc.com
+  - emeraldhavenllc.com
+  - ereinnovativesolutions.com
+  - evergreeninvestorloans.com
+  - ferocityassets.com
+  - financemydeals.com
+  - fuelmydeal.com
+  - fundflowing.com
+  - fundmyrei.com
+  - gallagher.capital
+  - getfunds2invest.com
+  - gpm101.com
+  - grabagator.com
+  - gtr7consulting.com
+  - ibnconsultingllc.com
+  - iipva.com
+  - ironheartproperties.com
+  - jakgi.com
+  - kaboomventures.com
+  - kopdynamicsolutions.com
+  - legacycapitalresources.net
+  - lifecyclerealty.com
+  - lionwoodventures.com
+  - madrygacapital.com
+  - mareisolutions.com
+  - marmcreativesolutions.com
+  - merqavaventures.com
+  - michelleshomesolutions.com
+  - mightybullfunding.com
+  - milehiprop.com
+  - mkdcapitalventures.com
+  - motheinvestor.com
+  - mountainmoverinvestments.com
+  - multyfunds.com
+  - myinvestorloan.online
+  - nightlightsolutions.com
+  - nurturedcapitalsolutions.com
+  - nxtlevelfinance.com
+  - pbnjinvestors.com
+  - peachstatecapital.com
+  - pearlcreekproperties.com
+  - property52.com
+  - qrein.com
+  - qslholdings.com
+  - realresultsrealtyinc.com
+  - redarrowmanagement.com
+  - relationalcapital.com
+  - restoration-north.com
+  - rfsfunding.com
+  - rocketcap.co
+  - rwcholdings.com
+  - saltandsoilproperties.com
+  - silverliningmt.com
+  - southerngrowthllc.com
+  - sunrise.properties
+  - symbiosellc.com
+  - t2omni.com
+  - tdjmanagementsolutions.com
+  - theboutin.com
+  - thegapinvestors.com
+  - thetc-collective.com
+  - threeamcapital.com
+  - ts-aristocrat.com
+  - ullend.com
+  - vernoncreativeconsulting.com
+  - vhsfunding.com
+  - vhsrealestate.com
+  - vikingprop.com
+  - vmopartners.com
+  - wjsegroup.com
+pml_personal_addresses: see PML list in the brain   # 92 addresses on gmail.com, yahoo.com, etc. — Confidential, never in this repo
 known_borrowers: []             # repeat borrowers / wholesalers
 personal_exclusions: []         # family, friends, personal services
 ```
