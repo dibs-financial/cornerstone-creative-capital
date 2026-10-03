@@ -2,151 +2,182 @@
 
 **Cornerstone Creative Capital LLC: company brain upgrade plan**
 Prepared October 3, 2026, in this repo (`dibs-financial/cornerstone-creative-capital-`).
-Owner: the founder. Status: agreed definition of success. Plan ready to execute.
+Owner: the founder. Status: agreed definition of success (revision 2). Plan ready to execute.
 
 > This file is read by name when work resumes. Do not rename it.
+
+**Revision 2 (October 3, 2026).** The evaluation was re-run after the first
+build steps landed and two new sources surfaced: the PML lender list
+(185 private money lenders) and the LenderFlow Intake spec v1.2. Changes:
+capital comes first in the definition of success (20 active lenders); the plan
+adds a lender pipeline and a Capital Desk agent; LenderFlow becomes
+Cornerstone's own intake portal (Cornerstone is the pilot customer, then the
+product is sold to other lenders); automated lender outreach is in scope and
+needs its own written rules. Superseded: revision 1's deal-flow-only definition
+of success. It is no longer current.
 
 ---
 
 ## 1. Executive summary
 
-**What you have.** A new repo with one file, `README.md`. Deal flow runs on
-Gmail, Google Workspace and your own memory. There's no CRM, no meeting
-recorder, no written rules and no weekly review. That is a normal place for a
-founder-led lender to start, and it makes building easier: there's no legacy
-system to migrate and no bad data to clean up. The brain can be built right the
-first time.
+**What you have.** A young brain built in the right order. The rules came
+first: Rule 1 (funds only to escrow) is an active decision record, the deal
+stages are approved, and three privacy and governance files are drafted
+(PR #3). No data source is connected yet. Outside the repo you have two real
+assets: a **185-lender PML network with about $107.6M in stated capacity**,
+and a **build spec for LenderFlow Intake**, an intake portal. Deal flow still
+runs on Gmail and your memory. There's no CRM and no meeting recorder.
 
-**What success means to you** (agreed October 3, 2026):
+**What success means to you** (agreed October 3, 2026, revision 2):
 
-> Within 90 days, Cornerstone runs its deal flow off the brain. Target:
-> **10 deals funded.** Every EMD and gap-funding request in Gmail is tracked to
-> funded, declined or paid off. Access is founder-only, with written rules
-> before anyone else joins. A **Monday** deal review runs off an agent briefing.
-> Answers come back current and cited. **Loan funds go only to escrow.**
+> By December 31, 2026: **20 active lenders** (first priority) and **10 deals
+> funded**, each matched to the lender who funded it. Lender outreach is
+> automated. LenderFlow is Cornerstone's intake portal, with Cornerstone as its
+> pilot customer. The **Monday** review covers capital first, then deals.
+> Access is founder-only, answers are cited, and **funds go only to escrow**.
 
-**The upgrade, in one paragraph.** First, write down the rules: the escrow-only
-rule, the deal stages, and what never enters the brain (borrower Social
-Security numbers, bank statements, DIBS material until you decide otherwise).
-Then connect your Gmail and calendar so every borrower, escrow officer and
-title company thread lands in one place tied to the right deal. Then turn on
-three agents' worth of work, owned by you:
-- **Monday deal review:** a briefing in your inbox before 8:00 on the deals
-  funded count against the target of 10, deals waiting on documents, deals
-  waiting on escrow, and payoffs coming due.
-- **New-request triage:** when a funding request lands, a drafted reply and a
-  deal record.
-- **Wire-instruction check:** any email carrying wire instructions is checked
-  against the escrow-only rule before a dollar moves.
+**The upgrade, in one paragraph.** Finish the rules: approve the privacy files,
+add a written exception that lets lender outreach send on its own (with
+CAN-SPAM handling and a separate sending domain), and clean the lender list.
+Then connect four sources:
+- the meeting recorder;
+- Gmail and calendar;
+- LenderFlow, running for Cornerstone, as the front door for deals;
+- the outreach tool's replies.
 
-The first briefing goes out **Monday, October 12**. The count is judged on
-**Monday, January 4, 2027**.
+Then run two agents, both owned by you:
+- **Capital Desk** takes each lender from contacted to active to funded a deal.
+  Its outreach sends automatically within limits. Replies are triaged and
+  answered as drafts.
+- **Deal Desk** takes each request from intake to funded, and protects every
+  wire.
 
-**Both paths are real.** You're one person with one mailbox, so the hardest
-part of a do-it-yourself build doesn't apply to you yet: that's email shared
-across a team, with per-person permissions. A careful solo build on Claude Code
-and the Gmail connector can carry you through the 90 days. The limits arrive
-when you add the first teammate or investor-relations helper, when you want
-skills to fire the moment an email lands instead of when you open your laptop,
-and when you want calls captured as transcripts. Section 6 shows where each
-path stands.
+One Monday briefing joins the two: lenders first, then deals, then which
+lender fits each open deal. The first briefing goes out **Monday, October 12**.
+Both numbers are judged on **Monday, January 4, 2027**.
+
+**Both paths are real, and they differ in one place.** As one person with one
+mailbox, you can run deals and lender replies on Claude Code with the Gmail
+connector. Bulk outreach is different on any path: it belongs in a dedicated
+sending tool on a separate domain, not in your main inbox. The brain's job is
+to know every lender, read every reply, and match capital to deals. Section 6
+compares the paths.
 
 ### What you keep, and what gets better
 
 | What you have (stays) | What gets better with Day AI |
 | --- | --- |
 | This repo, its git history, Claude Code | It stays where you write the rules and skills. They deploy from here over MCP and run when you're offline, not only when your laptop is open. |
-| Your Gmail inbox | Every borrower, escrow and title thread is in one graph, tied to the right deal, updated within minutes. Inclusion and exclusion rules mean personal mail and anything you flag stay out. |
-| Google Calendar and your borrower / escrow calls | Zoom, Meet and Teams calls are recorded and transcribed for free and attached to the deal. What a borrower promised on the call is on the record. |
-| **Rule 1: loan funds go only to escrow** | It becomes a workspace instruction every agent inherits. A wire request pointing anywhere else is flagged on arrival, not when you happen to reread the thread. |
-| Deals funded, counted in your head today | The Monday briefing reports the count against the target of 10, from the deal records the agents keep current from email. You don't have to type it anywhere. |
-| The Monday deal review you're starting | It runs off a briefing that is already in your inbox at 7:30, built from the past week's threads and calls, not reconstructed from memory. |
-| DIBS | It stays a separate, gated domain. Nothing from DIBS enters the deal graph until you write the rule that lets it. |
-| Founder-only access | It stays founder-only. When someone joins, they see only what their role allows, enforced in the store rather than by trust. |
+| The PML lender list (185 lenders, tiers WHALE → SMALL) | Each lender becomes a record in the graph with every email, call and deal tied to it. "Active" is computed from what actually happened, not from a spreadsheet column. |
+| Your Gmail inbox | Lender replies, borrower threads and escrow threads land in one graph within minutes, governed by the inclusion and exclusion rules in `governance/ingestion-rules.md`. |
+| LenderFlow Intake | It stays your portal and your product. A submission becomes a deal in the brain, tied to the borrower's email and calls, without being typed in twice. |
+| **Rule 1: loan funds go only to escrow** | It becomes a workspace instruction every agent inherits. A wire request pointing anywhere else is flagged on arrival. |
+| The approved deal stages (`domains/lending/stages.md`) | Every agent follows them. LenderFlow statuses map onto them, so the deals-funded count has a single source. |
+| The Monday review you're starting | A briefing in your inbox at 7:30: new active lenders against the target of 20, deals funded against 10, and which lenders fit each open deal. |
+| Google Calendar and your lender and borrower calls | Video calls are recorded and transcribed for free and attached to the lender or the deal. A lender's verbal "send me anything under $150k in Texas" is on record. |
+| DIBS | It stays separate and gated until you write its rules. |
 
 **Next step:** create the Day AI workspace at [day.ai/login](https://day.ai/login).
 That requires one Professional Agent at $75/month, cancel anytime; teammates,
 data and chat are free. Use coupon code **`UPGRADEMYBRAIN`** at checkout for a
 free first month. Then come back to this repo in Claude Code and say so; the
-build starts from section 7 of this document. Section 9 has the details.
+build continues from section 7 of this document. Section 9 has the details.
 
 ---
 
 ## 2. Current state
 
-### Inventory (surveyed October 3, 2026)
+### Inventory (re-surveyed October 3, 2026)
 
 | What | Evidence | Status |
 | --- | --- | --- |
-| Repo | `dibs-financial/cornerstone-creative-capital-`: one commit (`b984025`, Initial commit), one contributor | Exists, empty |
-| Files | `README.md`, containing the title line only | No knowledge content |
-| Rules for agents (`CLAUDE.md`, `BRAIN.md`) | none | Missing |
-| Skills / agents (`.claude/skills/`, `.claude/agents/`, prompt libraries) | none | Missing |
-| Automation (cron jobs, GitHub Actions, webhooks, `package.json`) | none | Missing |
-| Memory layer (databases, exports, CSVs) | none | Missing |
-| Email | Gmail / Google Workspace (from you) | In use, not connected to any brain |
-| CRM | none (from you) | Not needed: founder, no legacy CRM |
-| Meeting recorder | none (from you) | Missing |
-| Slack | not in use (from you) | Out of scope |
-| Product / engineering tracker | not applicable to the lending business | Out of scope |
+| Repo | `dibs-financial/cornerstone-creative-capital-`. PRs #1 and #2 merged, #3 open. One contributor | Active |
+| Constitution | `README.md` (purpose, Rule 1, goal) | Partial. `BRAIN.md`, `CLAUDE.md` and `company/` don't exist yet |
+| Decisions | `decisions/active/0001-funds-to-escrow-only.md` | ✓ Current |
+| Domains | `domains/lending/stages.md` | ✓ Approved |
+| Governance | `governance/data-classification.md`, `ingestion-rules.md` (92 PML business domains), `agent-action-policy.md` | Drafted, in PR #3 |
+| Skills | `.claude/skills/company-brain-evaluation/` (this evaluation) | No Cornerstone skills yet |
+| Lender network | `PML-lenders-for-bots.csv`, provided by the founder, **kept out of the repo** (Confidential) | 185 lenders, $107.6M stated capacity |
+| Intake portal | `LenderFlow_Intake_Spec_v1.2_Lovable.docx`, provided by the founder | A spec only. Not built yet |
+| Email | Gmail / Google Workspace | In use, not connected |
+| CRM / meeting recorder / Slack | none | Not in use |
+
+### The lender list, as data (no personal details)
+
+| Tier | Lenders | Notes |
+| --- | --- | --- |
+| WHALE | 10 | Stated capacity $1M–$30M |
+| SHARK | 82 | Mostly $500k–$700k |
+| GATOR | 56 | $100k–$450k |
+| MINNOW | 18 | $50k–$80k |
+| SMALL | 19 | $10k–$45k |
+
+Other columns: `priority` (176 EMAIL, 9 CALL FIRST), `pnw` (12 marked YES; its
+meaning isn't confirmed, see section 10) and `list_number` (2–8). 92 lenders
+use a business domain; 92 use Gmail, Yahoo, iCloud, Proton or similar.
+
+**Problems to fix before any automated send** (individual rows are named in
+chat, not here, because lender names are Confidential):
+- One row has "call or text" in the email field.
+- One lender appears twice, with two emails and two capacities.
+- One phone field reads "WhatsApp"; one phone number has an invalid area code.
+- About 50 company rows have a company word in `first_name` (for example
+  "Get" for two different firms), which a mail-merge would use as a greeting.
 
 ### Against the seven-layer reference shape
 
-| Layer | Present? | What it means for Cornerstone |
+| Layer | Present? | Evidence or gap |
 | --- | --- | --- |
-| 1. Constitution (`company/`) | No | Who you lend to, the loan products (EMD, gap), the rules that are never broken |
-| 2. Domains (`domains/`) | No | Lending, escrow and title partners, borrowers, DIBS |
-| 3. Decisions (`decisions/`) | No | Dated rules with what they replaced. Rule 1 is the first |
-| 4. Current state (`state/`) | No | This week's pipeline, priorities, risks |
-| 5. Procedures (`skills/`) | No | Triage, underwriting checklist, wire check, Monday review |
-| 6. Source registry (`sources/`) | No | Which system holds the truth for each fact (Gmail for status, escrow for wire receipt) |
-| 7. Governance (`governance/`) | No | Data classification, what agents may draft versus do |
+| 1. Constitution | Partial | `README.md`. Missing `BRAIN.md`, `company/products.md` (terms), `company/glossary.md` |
+| 2. Domains | Partial | `domains/lending/` ✓. Missing `domains/capital/` (lender stages, "active" definition) and `domains/lenderflow/` |
+| 3. Decisions | ✓ | `0001`. Next: `0002` lender outreach exception |
+| 4. Current state | No | `state/company-now.md` |
+| 5. Procedures | No | The fleet in section 7, step 4 |
+| 6. Source registry | Partial | Ingestion rules drafted. `sources/canonical-sources.yaml` not yet written |
+| 7. Governance | Drafted | PR #3 |
 
 ### Ladder rung
 
-**Below rung 1.** Rung 1 is a model plus connectors. You use AI tools, but
-nothing here connects them to Cornerstone's data yet.
+**Below rung 1** (no connectors live), but with rung-3 rules already in place.
+That's the right order, and it is rare.
 
 ### Honest strengths
 
-- **Nothing to unlearn.** No CRM full of stale stages, no export jobs, no
-  rules that contradict each other. Every definition in section 7 is written
-  once, correctly, before any data arrives. That's the order that works, and
-  most teams can only get to it by migrating.
-- **A business rule that's already crisp.** "Funds go only to escrow, always"
-  is exactly the kind of rule an agent can enforce. It's specific, testable,
-  and it protects against the most expensive failure in your business.
-- **A one-number goal.** Deals funded, with a target of 10 in 90 days, gives
-  every skill a bar to clear and the evaluation a judge (you) and a date.
-- **One mailbox.** Your whole deal flow passes through one Gmail account
-  today, so connecting a single source captures most of the business.
-- **You are the builder.** The biggest risk in adoption is a team with seats
-  and nobody writing skills. That isn't your problem.
-
-**The one-person caveat, stated kindly:** this is a single-hero system by
-design right now. That's fine for 90 days. It also means the brain's first job
-is to hold what's in your head (terms, partners, deal status), so the business
-doesn't stop if you're out for a week.
+- **Rules before data.** Rule 1, the stages and the privacy rules exist before
+  a single email is ingested. Most builds do this the other way round and pay
+  for it.
+- **A real capital network.** 185 lenders, already tiered, with a contact
+  preference marked. Most founders start capital-side work from nothing.
+- **A spec that already agrees with the brain's rules.** LenderFlow never
+  collects SSNs, keeps IDs and bank statements internal, has no auto-approval,
+  and treats documents under the GLBA Safeguards Rule. The brain's
+  classification says the same things independently.
+- **Two numbers, one judge, one date.** 20 active lenders and 10 deals
+  funded, judged by you on January 4, 2027.
+- **You are the builder,** and you're already shipping the rules through pull
+  requests.
 
 ---
 
 ## 3. Definition of success
 
-Agreed in this session on October 3, 2026, in your words:
+Agreed in this session on October 3, 2026 (revision 2), in your words and
+choices:
 
-- **Business outcome:** deals funded. **10 deals funded in 90 days**
-  (Oct 3 → Dec 31, 2026).
-- **Security and compliance:** founder-only access for now. Access rules are
-  written before anyone else is added.
-- **Adoption:** "I need one": a weekly deal review, which doesn't exist today.
-  It will be **every Monday**, run by you off an agent briefing.
-- **Better answers:** current terms and deal status, cited, never a replaced
-  rule.
-- **Standing rule:** "Fund money only goes to escrow. Always."
+- **Capital first:** "Add the capital side" and "capital side first." Target:
+  **"20 active lenders"** by December 31, 2026.
+- **Deals:** **10 deals funded** by December 31, 2026, each matched to the
+  lender who funded it.
+- **LenderFlow:** "Both." Cornerstone is the pilot customer, then it's sold
+  to other lenders.
+- **Outreach:** "Yes, automated sends."
+- **Ritual:** the Monday review, capital first, then deals.
+- **Unchanged from revision 1:** founder-only access with written access rules
+  before anyone joins; answers cited and current; **"Fund money only goes to
+  escrow. Always."**
 
-What Cornerstone is, in your words: *"a lender-facing LLC that provides EMD
-loans & Gap Funding. It also owns DIBS (Decentralized Infinite Bank-like
-System)."*
+*Superseded:* revision 1's deal-flow-only definition (10 deals funded, no
+capital target). Kept here for history; not current.
 
 ---
 
@@ -159,177 +190,206 @@ one of them is a prototype, not a finished brain.
    governed by explicit inclusion *and* exclusion rules. Credentials are per
    person, never one shared all-access login. Every value has a traceable
    source, and a source can be purged along with everything derived from it.
-   For Cornerstone in particular, this covers borrower personal and financial
-   data and wire instructions.
-2. **Performance.** Data lands continuously, within minutes, not on a nightly
-   job. It's kept at full fidelity: whole threads and whole transcripts, not
-   summaries. Retrieval is fast and cheap enough for an agent to brief you on a
-   deal in seconds.
-3. **Capability.** Things can fire when data arrives, such as an email or a
-   recording becoming ready, not only on a timer. Deals and actions are created
-   and updated from the source material automatically. Every source sits in one
-   graph tied to the same borrowers, escrow companies and deals.
+   For Cornerstone this covers borrower personal and financial data, wire
+   instructions, and lenders' personal contact details.
+2. **Performance.** Data lands continuously, within minutes. It's kept at full
+   fidelity: whole threads and transcripts, not summaries. Retrieval is fast
+   enough for an agent to brief you on a lender or a deal in seconds.
+3. **Capability.** Things can fire when data arrives (a lender reply, a
+   LenderFlow submission, a wire email, a recording), not only on a timer.
+   Lender and deal records are created and updated from source material. Every
+   source sits in one graph.
 4. **Adoption.** It covers the whole team's data and use, once there is a
    team. People can talk back, and the agent changes. It adds **no data
-   entry**: the upgrade removes typing and never adds it.
+   entry**.
 
 ---
 
 ## 5. Findings by aspect
 
-Five aspects were evaluated. Slack and product/engineering are out of scope:
-you don't use Slack, and Cornerstone doesn't ship software through a tracker.
-CRM is covered briefly because "no CRM" is itself a finding. Meetings and email
-carry the plan.
+### Capital: the PML lender network (new in revision 2)
+
+**What you use:** a CSV of 185 private money lenders with name, email, phone,
+stated capacity, tier, priority and list number. Outreach is planned to be
+automated ("for bots").
+
+**Captured in the company brain today:** the 92 business domains are in
+`governance/ingestion-rules.md`, so their replies will be let in. Nothing else
+yet. Which lenders are active, what each one funds (states, loan types, deal
+sizes, terms), and who has replied all live in your head or nowhere.
+
+**What's lost without it:**
+- "Active" can't be counted, so the target of 20 can't be tracked.
+- When a deal reaches underwriting, there's no quick answer to which lenders
+  fund this size, in this state, this week.
+- Replies get lost among borrower threads. One warm WHALE reply that goes
+  unanswered for three days costs more than 50 cold emails.
+- The data problems listed in section 2 would go straight into automated
+  emails.
+
+**Grade against the bar:**
+
+| Requirement | Today | Gap |
+| --- | --- | --- |
+| Safety | A CSV with personal emails and phones, held outside the repo (good) | A Confidential lender record per person; an unsubscribe list that is honored everywhere; a sending domain separate from your main inbox |
+| Performance | A static list | Each lender's status updated within minutes of a reply or call |
+| Capability | No sends, no tracking | Outreach on a schedule; a reply moves the lender's stage and drafts the answer; a deal reaching Underwriting produces a lender shortlist |
+| Adoption | You'd work the list by hand | You read the Monday count and answer warm replies, nothing else |
+
+**Ideal outcome:** every lender has a record with tier, stated capacity,
+lending criteria and stage. Outreach runs in capped daily batches from a
+dedicated domain, with unsubscribes honored. Each reply moves the lender's
+stage and gets a drafted answer within minutes. "Active" is computed from what
+happened, and the count against 20 appears on Mondays. Each funded deal names
+its lender.
+
+**DIY path (honest):** a cold-email tool (any sequencing tool with warmup,
+caps and unsubscribe handling) on a separate domain, plus a Google Sheet or
+`lenders/*.md` for stages, plus a Claude Code skill that reads replies from
+the tool or Gmail and updates the stages. Effort: about one week. Hazards: two
+copies of lender status (the tool's and yours) that drift apart; unsubscribes
+that have to be kept in sync by hand; personal contact data in a spreadsheet
+anyone with the link can open.
+
+**With Day AI:** lenders become people and organizations in the same graph as
+deals. Replies arriving in Gmail are ingested and tied to the lender. Lender
+stages can be a pipeline with AI-managed properties. *Verify in a demo
+(section 10): whether Day AI sends bulk outbound sequences itself. Assume not.
+The plan uses a dedicated sending tool on either path, with Day AI holding the
+record and the replies.*
+
+**Sequence:** step 2 (list cleanup, outreach rules) and step 3 (sending
+domain, warmup). It goes first among the agents because the target is
+capital first.
+
+### Intake: LenderFlow (new in revision 2)
+
+**What you use:** a build spec, v1.2, for Lovable (React/TypeScript on managed
+Postgres): an eight-step submission form, a private document bucket, a staff
+queue, and 10 internal statuses. It's a spec only, not built yet.
+
+**Captured in the company brain today:** nothing.
+
+**Fit with the brain:** strong. LenderFlow already enforces what
+`data-classification.md` requires:
+- no SSN, EIN or bank credentials are collected;
+- IDs and bank statements are internal only and reached through short-lived
+  links;
+- the activity log can only be added to, never edited;
+- nothing auto-approves.
+
+That answers an open question from revision 1: **the LenderFlow private bucket
+is the document vault** for Regulated borrower documents. The brain records
+only "received" and the date.
+
+**How LenderFlow statuses map onto our deal stages:**
+
+| LenderFlow status | Brain stage (`domains/lending/stages.md`) |
+| --- | --- |
+| Draft | Not in the brain |
+| Submitted | Inquiry |
+| Missing Documents, Additional Information Requested | Docs |
+| Under Review, Intake Complete | Underwriting |
+| Terms Sent | Underwriting, with terms issued (exit pending the borrower's written acceptance) |
+| On Hold | No stage change; flagged in the Monday briefing |
+| Not Pursuing | Declined |
+| Withdrawn | Withdrawn |
+| *(no LenderFlow status)* | Terms accepted, Escrow verified, Funded, Paid off. These stay brain-only, which matches the spec's own rule "do not invent Funded" |
+
+**Grade against the bar:**
+
+| Requirement | Today | Gap |
+| --- | --- | --- |
+| Safety | Strong by design (row-level security, private bucket, append-only log) | Must pass the spec's own "Borrower A vs Borrower B" test before real files arrive |
+| Performance | Not built | A submission reaches the brain within minutes |
+| Capability | Not built | A submission creates the deal; a status change moves the stage; a deal reaching Underwriting triggers the lender match |
+| Adoption | Not built | Borrowers submit once; you never re-type a deal |
+
+**DIY path:** build LenderFlow per its spec (Prompts 0–8, about 1–2 weeks of
+Lovable sessions). Add one Edge Function that posts each submission and status
+change to a webhook. The brain side receives it: a `deals/` file in the DIY
+version, a skill trigger in the always-on version. Hazard: LenderFlow and the
+brain disagree when the webhook fails silently. The Monday briefing should
+report its last-received event time.
+
+**With Day AI:** the same Edge Function posts to Day AI through its API
+(reference: the Day AI SDK, https://github.com/day-ai/day-ai-sdk). It creates
+or updates the opportunity tied to the borrower's existing email and calls.
+*Verify in a demo: inbound API or webhook for creating opportunities, and
+idempotent updates.*
+
+**Sequence:** step 3, after the privacy rules. It's built for Cornerstone
+first; the commercial launch to other lenders comes after the pilot proves
+out.
 
 ### Email
 
-**What you use:** Gmail on Google Workspace, one mailbox (founder). This
-mailbox carries borrower requests, purchase contracts, escrow-officer
-correspondence, title commitments, wire instructions and payoff
-correspondence.
+**What you use:** Gmail on Google Workspace, one mailbox. It carries borrower
+requests, escrow and title correspondence, wire instructions, payoffs and,
+from now on, **lender replies**.
 
-**Captured in the company brain today:** nothing. Every deal's status lives in
-the inbox and in your head.
-
-**What's lost without it, in your world:**
-- A borrower's 4:10pm reply ("seller accepted, need EMD by tomorrow noon") sits
-  unread until you next check. Speed is the product in EMD lending.
-- Wire instructions arrive by email, and email is where wire fraud happens. No
-  system compares an incoming instruction with the escrow company already on
-  file for that deal.
-- Payoff dates live in threads. Nothing reminds you that a gap loan is due on
-  closing day, or that a closing slipped.
-- "What are our terms?" has no single current answer, so an old quote in a
-  six-month-old thread can be mistaken for today's.
+**Captured today:** nothing is ingested yet. The draft inclusion and exclusion
+rules exist (PR #3), including 92 PML business domains. The 92 lenders on
+personal-provider addresses are matched from the lender list in the brain.
 
 **Grade against the bar:**
 
 | Requirement | Today | Gap |
 | --- | --- | --- |
-| Safety | Gmail's own security only. There are no classification or exclusion rules, and no wire check | Exclusion rules (personal mail, DIBS, regulated borrower documents); Rule 1 checked on every wire email; a traceable source for every deal fact |
-| Performance | Nothing is ingested | Threads in the graph within minutes, whole threads with attachments referenced |
-| Capability | Nothing fires | An incoming request creates a deal and drafts a reply; an incoming wire email triggers the check |
-| Adoption | You re-read threads to rebuild status | Status comes out of the email itself. You type nothing to keep the pipeline current |
+| Safety | Rules drafted, not enforced; no wire check | Rules enforced at ingestion; Rule 1 checked on every wire email; never exclude all of gmail.com |
+| Performance | Nothing ingested | Within minutes, full threads |
+| Capability | Nothing fires | A lender reply, a funding request or a wire email each trigger a skill |
+| Adoption | You re-read threads | Status comes out of the email itself |
 
-**Ideal outcome:** your mailbox flows into the graph continuously. Each thread
-resolves to a borrower, an escrow or title company, and a deal. Personal mail,
-DIBS mail and borrower identity and bank documents are excluded by rule.
-Incoming requests and wire instructions fire skills. When a teammate joins,
-they see only the threads their role allows.
+**DIY path:** reading on demand through the Gmail connector is feasible now.
+Continuous ingestion means restricted Gmail API scopes plus Gmail's
+undocumented rate limits, which can suspend API access to your own mailbox for
+an unknown period. Governance and per-person permissions aren't a reasonable
+solo build once a second person is involved. **And on any path:** don't send
+bulk outreach from this mailbox. Spam complaints from cold email would damage
+the deliverability of the inbox that carries your escrow threads.
 
-**DIY path (honest):**
-- *Solo, read-only, on demand: feasible now.* Claude Code with a Gmail
-  connector can search and read your mailbox when you ask. Pair it with a
-  `deals/` folder of one Markdown file per deal, which a skill updates when you
-  run it. Effort: a few days. Limits: it only runs when you open the laptop, so
-  nothing fires on arrival. Status is a copy in Markdown that drifts from the
-  inbox. Provenance is whatever the skill remembers to cite.
-- *Continuous ingestion: hard.* It requires the Gmail API with restricted
-  scopes, push notifications or polling, a store, thread-to-deal matching, and
-  handling for Gmail's undocumented rate limits. Hitting those limits can
-  suspend API access to your own mailbox for an unknown period, which is
-  dangerous for a business that runs on that inbox. Effort: weeks, and then you
-  maintain it.
-- *Governance and multi-person permissions: not a reasonable build.*
-  Inclusion and exclusion by address, domain and label, per-thread
-  authorization, and purge by lineage are a product, not a weekend. They don't
-  matter while you are alone; they become required the day a second person
-  has access.
+**With Day AI:** Google Workspace connects under your own login, with
+inclusion and exclusion by address, domain and label, per-thread permissions,
+and email arrival as a skill trigger.
 
-**With Day AI:** Google Workspace connects under your own login. Inclusion and
-exclusion controls by address, domain and label, per-thread permissions, and
-continuous ingestion come built in. Threads resolve to people, organizations
-and opportunities, and an email arriving can trigger a skill. *Verify in a
-demo (section 10): handling of PDF attachments such as title commitments and
-wire letters, and the exclusion controls for borrower identity documents.*
-
-**Sequence:** step 3 of section 7, right after the rules are written and the
-recorder is turned on. For Cornerstone it is the highest-value source, because
-the deal flow *is* email.
+**Sequence:** step 3.
 
 ### Meeting recording
 
-**What you use:** no recorder. Calls with borrowers, wholesalers, escrow
-officers and capital partners happen with no record. *Open: the mix of phone
-versus Zoom/Meet calls, and how many per week (section 10).*
+**What you use:** none. Lender calls (9 lenders are marked CALL FIRST),
+borrower calls and escrow calls leave no record.
 
-**Captured in the company brain today:** nothing. Everything said on a call
-disappears when it ends, unless you write it down.
+**Grade:** missing on all four requirements. Nothing is captured, nothing
+fires, and there's no evidence of what was promised or quoted.
 
-**What's lost without it:** a borrower's stated exit ("assignment closes the
-14th, I'm paying you from the assignment fee") and an escrow officer's verbal
-confirmation of the account. Also the terms you quoted, which is the commitment
-you will be held to. Calls are where the facts behind underwriting are said
-first.
+**Ideal outcome:** video calls with lenders and borrowers are recorded with
+consent, transcribed, and attached to the lender or the deal. A lender's
+stated criteria go straight onto their record. Phone calls are logged with a
+short note to self, which enters the brain through the `Cornerstone` label
+(rule I-1 in `ingestion-rules.md`).
 
-**Grade against the bar:**
+**DIY path:** a commercial recorder plus a skill that pulls its transcripts.
+That works, but the transcripts sit in a second silo. A custom recorder is
+months of work.
 
-| Requirement | Today | Gap |
-| --- | --- | --- |
-| Safety | No record, which is also no evidence | Consent-compliant recording, with the transcript attached to the deal |
-| Performance | Nothing is captured | Full transcript within minutes of the call ending |
-| Capability | Nothing fires | A recording becoming ready updates the deal and drafts the follow-up |
-| Adoption | You take notes, or don't | You do nothing different and the record exists |
+**With Day AI:** per Day AI, a native, free, consent-handled recorder whose
+transcripts land in the same graph. *Verify: phone calls are likely not
+covered.*
 
-**Ideal outcome:** every video call about a deal is recorded with consent,
-transcribed, and attached to the deal. The follow-up email is drafted from the
-transcript, including the terms quoted. Phone calls are covered either by
-moving deal calls to Meet or Zoom, or by a one-line voice note logged after
-the call.
-
-**DIY path (honest):** a recording bot per platform, consent notices by
-state, storage, transcription, matching speakers to contacts, then plumbing
-transcripts into the deal files. That's months of work to end up worse than an
-off-the-shelf recorder. A lighter DIY option is a commercial recorder plus a
-skill that pulls its transcripts. That works, but the transcripts live in a
-second silo.
-
-**With Day AI:** per Day AI, the recorder is native and free, consent-handled,
-and lands transcripts in the same graph as email, tied to the deal. A
-recording becoming ready can fire a skill directly. *Verify in a demo: phone
-calls are likely not covered, so confirm which platforms are.*
-
-**Sequence:** step 2 of section 7. It's free, quick to turn on, and the least
-sensitive source. Within email-first lending its value comes second to email,
-but it goes live first because it costs nothing and gets used right away.
+**Sequence:** step 3, first item. It's free and the least sensitive source.
 
 ### CRM
 
-**What you use:** none. **Finding: this is an advantage.** There's nothing to
-migrate, so no field mapping and no stale stages. A legacy CRM would make you
-type data in by hand, the opposite of the "no data entry" requirement.
+**What you use:** none, and that is still an advantage. The lender pipeline and
+the deal pipeline are both defined in this repo and filled from the sources.
+Nothing is typed in by hand.
 
-**Grade against the bar:** not applicable. The deal record in section 7 *is*
-the CRM, created and updated from email and calls.
+### Slack, product and engineering
 
-**Ideal outcome:** a deal pipeline with your stage definitions (section 7,
-step 1), built and maintained by agents from source material. The deal record
-is the first place to check for deal facts and is where the deals-funded count
-comes from.
-
-**DIY path:** one Markdown or YAML file per deal in `deals/`, updated by a
-skill, which is workable for 10–30 deals. A spreadsheet in Google Sheets is
-the common alternative. Both are copies that drift unless something keeps them
-in sync.
-
-**With Day AI:** opportunities and pipelines are native objects in the same
-graph as email and meetings. Properties can be AI-managed, human-in-the-loop
-or manual, decided per field.
-
-**Sequence:** the stage definitions in step 1; the deal records are created
-from email in step 3.
-
-### Slack: out of scope
-
-You don't use Slack. Nothing is planned for it. If capital partners or
-wholesalers later move to shared Slack channels, run `eval-slack` again.
-
-### Product and engineering feedback loop: out of scope for the lending business
-
-Cornerstone doesn't ship software through an issue tracker. **DIBS may.**
-If DIBS is a software product under development, this aspect applies to DIBS
-and gets its own evaluation (section 10).
+Slack is out of scope. LenderFlow is the one software product. Its build
+follows its own spec and its own issue tracking. If it moves to GitHub Issues
+or Linear, run the product and engineering evaluation for it.
 
 ---
 
@@ -337,209 +397,204 @@ and gets its own evaluation (section 10).
 
 | Aspect | Current state | DIY build-out (effort and hazards) | With Day AI (mechanism) |
 | --- | --- | --- | --- |
-| Rules and definitions | None written | Same on both paths: `BRAIN.md`, `CLAUDE.md`, stage definitions in this repo. 1–2 days | Same files in this repo, *plus* deployed as workspace instructions every agent inherits |
-| Email | Inbox only | On-demand Gmail connector: days. Continuous ingestion: weeks, plus a risk of suspended API access. Governance and permissions: not a reasonable solo build | Native Google Workspace ingestion, inclusion/exclusion controls, per-thread permissions |
-| Meetings | Nothing captured | Commercial recorder plus a transcript-pulling skill (a second silo), or months of a custom build | Native free recorder, transcripts in the same graph |
-| Deal record / pipeline | In your head | `deals/*.md` or a Google Sheet maintained by a skill run by hand. It drifts | Native opportunities, updated from email and calls |
-| Monday briefing | No meeting | A skill you run Monday morning in Claude Code. It needs your laptop open | A scheduled skill that runs and delivers before you wake |
-| Wire check (Rule 1) | Your vigilance | A skill you run on a thread when you remember to | Fires when an email with wire instructions lands |
-| Permissions | Not applicable (one person) | Fine alone; breaks when you add a person | Enforced per person in the store |
-| Talking back | Not applicable | You edit the prompt file | Replying to the agent changes its behavior; versioned |
+| Rules and definitions | Rule 1, stages ✓; privacy drafted | Same on both paths: the files in this repo | The same files, also deployed as workspace instructions |
+| Lender network | A CSV outside the repo | Sending tool + Sheet or `lenders/*.md` + reply skill. About a week. Status drifts between two copies | Lenders as records in the graph; replies tied to them; *outbound sending still via a dedicated tool (verify)* |
+| Outreach sending | None | Dedicated domain + sending tool on both paths. Never your main inbox | Same |
+| Intake (LenderFlow) | A spec | Build per the spec + webhook to `deals/`. 1–2 weeks | Build per the spec + webhook to the Day AI API |
+| Email | Inbox only | On-demand connector: days. Continuous: weeks, plus a suspension risk | Native ingestion, governance, permissions |
+| Meetings | Nothing | Commercial recorder in a second silo | Native free recorder in the same graph |
+| Monday briefing | No meeting | A skill run by hand on Monday morning | Scheduled; delivered before you wake |
+| Lender ↔ deal match | In your head | A skill run by hand on a deal | Fires when a deal reaches Underwriting |
+| Wire check (Rule 1) | Your vigilance | Run by hand | Fires when a wire email lands |
 
-**Bottom line:** for the 90-day goal as one person, DIY can work if you're
-disciplined about running the skills. The gaps that matter for you are
-**events** (a request or wire email arriving at 4pm acted on at 4pm, not when
-you next sit down), **calls** (nothing captures them today), and **the day you
-add a person**. Those are what the substrate is for.
+**Bottom line:** capital-first raises the stakes on speed. Lender replies and
+LenderFlow submissions arrive at any hour, and a reply answered three days
+late doesn't make the target of 20. That's where events, as opposed to running
+skills by hand, start to matter. Sending stays a separate tool on either path.
 
 ---
 
 ## 7. The upgrade plan, sequenced
 
-Each step is written to run on either path. Where they differ, both are given.
-Gates are marked **GATE**: don't start the next step until they hold.
+Gates are marked **GATE**. Done items are marked ✓.
 
-### Step 0: Outcome → workflow → where it breaks (this week, Oct 5–9)
+### Step 0: Outcome → workflow → where it breaks
 
 | Outcome | Workflow | Where it breaks today |
 | --- | --- | --- |
-| 10 deals funded by Dec 31 | Request → docs → underwrite → terms → escrow verified → **wire to escrow** → payoff | Requests answered when you get to them; status in your head; wire instructions checked by eye; payoffs remembered rather than tracked |
+| **20 active lenders** | List → contact → reply → criteria on file → active → funds a deal | No sends; no record of replies or criteria; "active" undefined |
+| **10 deals funded** | Intake (LenderFlow) → docs → underwrite → **match a lender** → terms → escrow verified → **wire to escrow** → payoff | No intake portal; status in your head; no lender match; wire check done by eye |
 
-The agents remove those four breaks. Fields come from what those agents need,
-not from a CRM template.
+### Step 1: Constitution and rules
 
-### Step 1: Write the constitution and the rules (Oct 5–7, ~1 day)
+- ✓ `domains/lending/stages.md`: approved (PR #2).
+- ✓ `decisions/active/0001-funds-to-escrow-only.md`: current (PR #2).
+- `BRAIN.md`, `CLAUDE.md`, `company/glossary.md` (add PML, active lender,
+  tier, CALL FIRST).
+- `company/products.md`: current EMD and gap terms. **Needs your terms.**
+- **New: `domains/capital/lender-stages.md`.** A draft for your approval:
 
-Create in this repo:
-
-- **`BRAIN.md`**: purpose, non-goals ("not the system of record for loan
-  balances"), source hierarchy, agent behavior ("draft by default, never
-  send, never initiate or approve a wire").
-- **`CLAUDE.md`**: navigation and durable rules only.
-- **`decisions/active/0001-funds-to-escrow-only.md`**: Rule 1, with
-  frontmatter:
-  `owner: founder · date: 2026-10-03 · source: founder, Claude Code session ·
-  status: current`. Its guardrail: any instruction to pay a party other than
-  the escrow or title company on the deal is a **stop**. Escrow wire
-  instructions are confirmed by a phone call to a number found independently
-  (the title company's published number), never one taken from the email.
-  *What would change our mind:* a field to fill in, not a default.
-- **`company/products.md`**: EMD loan and gap funding. Current terms (rate,
-  points, maximum, typical term, minimum documents) as **canonical facts with
-  a date**. Earlier terms move to `decisions/superseded/`, marked
-  non-operative.
-- **`company/glossary.md`**: EMD, gap funding, assignment, double close, title
-  commitment, payoff letter, "funded" (= wire received by escrow and
-  confirmed), and DIBS (one line, pointing to its gated domain).
-- **`domains/lending/stages.md`**: the pipeline, each stage written as a brief
-  to a new hire. **Approved by the founder on 2026-10-03**; the record of
-  truth is `domains/lending/stages.md`:
-
-  | Stage | Enters when | Leaves when | Goes stale after |
+  | Stage | Enters when | Leaves when | Stale after |
   | --- | --- | --- | --- |
-  | Inquiry | A funding request arrives | Docs requested, or declined | 1 business day without a reply from you |
-  | Docs | You've requested the purchase contract, ID, exit plan | Docs complete | 3 days without a borrower reply |
-  | Underwriting | Docs complete | Terms issued or declined | 2 days |
-  | Terms accepted | Borrower accepts in writing | Escrow verified | 2 days |
-  | Escrow verified | Escrow company and wire instructions confirmed by independent callback (Rule 1) | Wire sent | 1 day |
-  | **Funded** | Escrow confirms receipt of the wire | Payoff received, or default | — |
-  | Paid off | Payoff received | — | — |
-  | Declined / Withdrawn | Any stage | — | — |
+  | Listed | On the PML list, clean data | Contacted | — |
+  | Contacted | First outreach sent (or a call, for CALL FIRST) | Replied, unsubscribed, or 3 touches without a reply | 21 days |
+  | Replied | Any human reply | Qualified, or not interested | 3 days without your answer |
+  | Qualified | Criteria on file: states, loan types, size range, terms, how they fund | Active | 14 days |
+  | **Active** | **Qualified, and confirmed available capital within the last 60 days** (in writing or on a recorded call) | Funds a deal, or 60 days without confirmation | 60 days |
+  | Funded a deal | Their money funded a Cornerstone deal (escrow-confirmed) | — | — |
+  | Not interested / Unsubscribed | Any stage | — | Never contacted again |
 
-  **Deals funded = deals that entered Funded this period.** That definition is
-  the Monday number.
+  **Active lenders = lenders currently in Active or Funded a deal** (with a
+  confirmation in the last 60 days). That's the Monday number against 20.
+- **New: `domains/lenderflow/README.md`.** What LenderFlow is, the
+  pilot-then-product plan, and the status mapping from section 5.
 
-**GATE:** you've read and approved `stages.md` (done, 2026-10-03) and `0001` (written 2026-10-03; approved on merge of its PR).
+**GATE:** you've approved `lender-stages.md`, including the definition of
+"active".
 
-### Step 2: Privacy rules, written before any source connects (Oct 7–8)
+### Step 2: Privacy and outreach rules (before any source connects or any email is sent)
 
-**`governance/data-classification.md`**:
+- **PR #3** (`data-classification.md`, `ingestion-rules.md`,
+  `agent-action-policy.md`), reviewed and merged. Still blank: escrow and
+  title domains, personal contacts to exclude, retention after payoff
+  (counsel). ✓ Answered: the vault is the LenderFlow private bucket.
+- **New: `decisions/active/0002-lender-outreach-automated.md`**, a narrow
+  exception to "never send unsupervised":
+  - **Scope:** first-touch and follow-up emails to the PML list only. Never
+    to borrowers, escrow, title or anyone else. Replies to lenders stay drafts
+    you send.
+  - **Content:** approved templates only. No terms, rates or deal specifics
+    in automated emails. No attachments.
+  - **CAN-SPAM:** a working unsubscribe link, a physical mailing address,
+    honest subject lines, and opt-outs honored within 10 business days.
+  - **Limits:** a separate sending domain (not your main mailbox); a warmup
+    period; a daily cap (start at 30/day and raise only while bounces stay
+    under 3% and complaints near zero); stop automatically if those
+    thresholds are crossed.
+  - **CALL FIRST lenders** (9) are never emailed first. A call task goes on
+    the Monday list instead.
+  - **Stop list:** Unsubscribed and Not interested lenders are never contacted
+    again, in any tool.
+- **Lender list cleanup** (the five problems in section 2). The list is kept
+  in the brain as Confidential, never in this repo.
 
-| Class | Cornerstone examples | Agent behavior |
-| --- | --- | --- |
-| Internal | Terms, partner list, pipeline | Read, summarize, draft |
-| Confidential | Borrower names, deal amounts, purchase contracts | Read when scoped to the deal; never in external drafts to other parties |
-| Restricted | **Wire instructions**, escrow account numbers, DIBS material | Read only to run the Rule 1 check; never quoted in briefings (last 4 digits only) |
-| Regulated | Borrower SSNs, ID scans, bank statements, credit reports | **Excluded from the brain.** They stay in Gmail or your document vault. The brain records "received, date," never the content |
+**GATE:** 0002 approved; the list is clean; the sending domain is
+authenticated (SPF, DKIM, DMARC).
 
-**`governance/ingestion-rules.md`**: include your business address and
-business threads. Exclude personal domains and family, banking and brokerage
-notification senders, anything labeled `Personal` or `DIBS`, and attachments
-matching ID, bank-statement or credit-report patterns.
+### Step 3: Connect sources, highest trust-to-value first
 
-**`governance/agent-action-policy.md`**: read is wide; draft is strong;
-**send is never unsupervised**. Agents **never** initiate, approve or
-change a wire. They don't change terms. Marking a deal Funded needs your
-confirmation.
+1. **Meeting recorder:** Meet and Zoom deal calls and lender calls.
+2. **Gmail and Calendar:** under your own login, with the PR #3 rules
+   applied. Backfill 90 days.
+3. **Sending tool:** on the dedicated domain. Load the clean list, starting
+   with the WHALE and SHARK tiers in sends 1–2 (92 lenders, the largest stated
+   capacity). Replies route to Gmail so the brain sees them.
+4. **LenderFlow for Cornerstone:** build per its spec (Prompts 0–8), pass the
+   "Borrower A vs Borrower B" test, then add the webhook to the brain.
+5. **`sources/canonical-sources.yaml`:**
+   - lender stage comes from the lender record (derived from replies and
+     calls);
+   - deal intake comes from LenderFlow;
+   - deal status after Terms accepted comes from email;
+   - wire receipt comes from escrow's confirmation only;
+   - unsubscribes come from the sending tool, mirrored into the brain.
 
-**Account hygiene (both paths, do this regardless):** hardware-key or
-app-based two-factor on the Google account, and a review of mail forwarding
-rules. A compromised inbox is the main way wire fraud starts.
+**GATE (data readiness):** each of the 10 WHALE lenders has a correct record
+(spot-check all 10); every deal you know is open exists; one test LenderFlow
+submission arrives in the brain within 5 minutes.
 
-**GATE:** written and committed before step 3.
+### Step 4: The fleet, two agents and one shared briefing
 
-### Step 3: Connect sources, highest trust-to-value first (Oct 8–10)
+**Agent 1: `Capital Desk`.** One job: build and keep 20 active lenders, and put
+the right lender in front of each deal. Owner: you.
 
-1. **Meeting recorder** (Day AI: free; DIY: a commercial recorder). Turn it on
-   for Meet and Zoom calendar events. Move deal calls to video where you can.
-   For phone calls, a 20-second voice memo or a typed note to yourself by
-   email ("Call w/ [borrower], exit = assignment 10/14") is the fallback, and
-   it goes through the email path.
-2. **Gmail and Calendar**, under your own login, with the step 2 rules
-   applied. **Backfill 90 days** so open deals and recent payoffs exist on
-   day one.
-3. **Source registry** (`sources/canonical-sources.yaml`): deal status comes
-   from the deal record (derived from email); terms from `company/products.md`;
-   wire receipt from **escrow's confirmation email only**; loan balance from
-   your bank or ledger (never copied into Markdown).
-
-**GATE (data readiness):** the backfill created a deal record for every deal
-you know is open, and you've spot-checked five of them against your memory.
-If one is wrong, fix the matching rules before any skill reads them.
-
-### Step 4: The fleet, one workhorse plus one background skill (Oct 10–12)
-
-**One agent: `Cornerstone Deal Desk`.** It has one job: keep every funding
-request moving toward funded or a clean decline, and protect every wire.
-Owner: you.
-
-| Skill | Situation it serves | Trigger | Bar (numeric) | Empty case | Acts by |
+| Skill | Situation | Trigger | Bar | Empty case | Acts by |
 | --- | --- | --- | --- | --- | --- |
-| **`monday-deal-review`** | Monday 8:00 deal review | Cron, Mon 7:30 CT | Deals funded this period vs. the target of 10 and the weekly pace needed; every deal in Docs, Underwriting, Terms accepted or Escrow verified listed with its next step and owner; every payoff due in 14 days | "No open deals and no payoffs due. Pace needed: N per week." One line | Email to you; ≤1 screen on a phone |
-| **`new-request-triage`** | A borrower or wholesaler asks for EMD or gap money | Email lands from a new sender with funding language | Deal record created and a docs-request reply drafted within 5 min of arrival | No funding language: does nothing | Draft in Gmail, unsent |
-| **`wire-instruction-check`** (Rule 1) | An email contains wire or bank instructions | Email lands with routing or account patterns, or an attached wire letter | Every such email checked: is the payee the escrow or title company on this deal? Do the instructions match ones previously verified? | Not wire-related: silent | Flag to you marked **STOP** on any mismatch or change; never edits, never forwards |
-| **`deal-record-keeper`** (background) | Status moves when emails and calls happen | Each email or recording on a deal | Stage and next step updated, with the source thread cited; old → new reported with date | No change: silent | Writes the deal record; Funded needs your confirmation |
+| **`lender-outreach`** | Lenders on the list who haven't been contacted | Daily, weekdays 9:00 CT, under 0002's cap | Sends only to Listed/Contacted lenders who haven't unsubscribed, excluding CALL FIRST; ≤ the daily cap; stops on threshold breach | Nobody due: sends nothing, logs "0 due" | **Sends automatically** (the 0002 exception) |
+| **`lender-reply-triage`** | A lender replies | Reply arrives in Gmail from a lender | Stage updated and answer drafted within 5 minutes; criteria extracted to the record with the source thread cited; unsubscribe or "not interested" goes straight to the stop list | Auto-reply or out-of-office: no stage change | Draft in Gmail, unsent; record updated |
+| **`deal-lender-match`** | A deal needs capital | A deal enters Underwriting (from LenderFlow) | A shortlist of up to 5 Active lenders whose criteria fit the size, state and loan type, each with the reason and the source cited | No fit: "No active lender fits [criteria]. Closest: …" | Shortlist to you; introduction email drafted, unsent |
 
-Skill-writing standard for all four: section headings named after situations,
-not systems. Each has a numeric bar, an explicit empty case, and a list of
-things it never does. It names its sibling skills so they don't overlap.
+**Agent 2: `Deal Desk`.** One job: move every funding request toward funded
+or a clean decline, and protect every wire. Owner: you.
 
-**DIY version:** the same four skills as `.claude/skills/*/SKILL.md`, run by
-hand or from a local scheduler. `new-request-triage` and
-`wire-instruction-check` become "run on my inbox when I sit down": the
-on-arrival protection is lost. **Day AI version:** the same prompts, written
-here and deployed over MCP. They fire on the email event and on the Monday
-schedule.
+| Skill | Situation | Trigger | Bar | Empty case | Acts by |
+| --- | --- | --- | --- | --- | --- |
+| **`new-request-triage`** | A request arrives by email instead of LenderFlow | Email with funding language from a new sender | Deal created; reply drafted with the LenderFlow submit link within 5 minutes | No funding language: does nothing | Draft, unsent |
+| **`wire-instruction-check`** (Rule 1) | Any wire or bank instructions | Email with routing or account patterns, or a wire letter | Every one checked against the deal's verified escrow | Not wire-related: silent | **STOP** flag; never edits or forwards |
+| **`deal-record-keeper`** (background) | Status moves | A LenderFlow event, email or recording | Stage updated with the source cited; old → new with date; LenderFlow mapping per section 5 | No change: silent | Writes; Funded / Paid off / Declined need your confirmation |
+
+**Shared: `monday-review`** (cron, Monday 7:30 CT, about one phone screen):
+1. **Capital:** active lenders against 20 and the weekly pace needed;
+   lenders newly Replied, Qualified or Active; warm replies waiting on you;
+   CALL FIRST calls due; outreach health (sent, bounce rate, unsubscribes).
+2. **Deals:** deals funded against 10; every open deal with its stage, next
+   step and matched lenders; payoffs due within 14 days; LenderFlow's
+   last-received event time.
+3. **Empty case:** "No change since last Monday. Pace needed: N lenders/week,
+   M deals/week."
+
+**DIY version:** the same skills in `.claude/skills/`, run by hand. Sending
+goes through the sending tool's own scheduler. **Day AI version:** the same
+prompts, deployed over MCP and triggered by events and the schedule.
 
 ### Step 5: Ignition plan
 
-- **The standing meeting:** **the Monday deal review**, every Monday,
-  8:00–8:30 CT, on your calendar starting **Monday, October 12, 2026**.
-  It's the meeting you said you need.
-- **The leader's number from the agent:** *deals funded vs. 10.* You
-  quote it from the briefing, not from memory. If the two disagree, the
-  briefing is wrong and gets fixed that day.
+- **The standing meeting:** the Monday review, 8:00–8:30 CT, starting
+  **Monday, October 12, 2026**.
+- **The leader's numbers from the agent:** active lenders against 20, deals
+  funded against 10. You quote them from the briefing, never from memory.
 - **Owner of the managed skills:** you.
 - **Crawl → walk → run:**
-  - **Crawl (Oct 12 – Oct 25):** briefing and triage drafts, human-in-the-loop
-    on everything. Wire check flags only. **Two-week test (Oct 26):** did you
-    run two Monday reviews off the briefing, and did it list every open deal?
-  - **Walk (Oct 26 – Nov 22):** `deal-record-keeper` writes stages
-    on its own (except Funded). You start replying to the agent ("shorter,"
-    "skip payoffs > 30 days") and the skills change.
-  - **Run (Nov 23 – Dec 31):** add a payoff-watch skill (daily, payoffs due in
-    3 days and slipped closings) and a post-call follow-up drafted from the
-    transcript. Decide on DIBS and any first teammate (step 6).
-- **Success bar:** **10 deals funded by Dec 31, 2026**, counted from Funded
-  records each confirmed by an escrow receipt email. **Judge:** you.
-  **Decision meeting:** Monday, January 4, 2027, with this section re-read
-  word for word. Secondary proof points: zero wires sent to a non-escrow payee
-  (target: zero, no exceptions), and median time from request to first reply
-  (baseline taken in week 1).
+  - **Crawl (Oct 5 – Oct 25):**
+    - rules and list cleanup (steps 1–2);
+    - sending-domain warmup;
+    - the LenderFlow build started;
+    - the first WHALE outreach, done by hand: 10 lenders, the 9 CALL FIRST
+      calls, and personal emails from you.
+    - **Two-week test (Oct 26):** two Monday reviews run off the briefing;
+      every WHALE lender has a stage.
+  - **Walk (Oct 26 – Nov 22):**
+    - automated outreach to SHARK, then GATOR, under the cap;
+    - reply triage live;
+    - LenderFlow live for Cornerstone;
+    - `deal-lender-match` on.
+    - **Checkpoint (Nov 23):** at least 10 active lenders.
+  - **Run (Nov 23 – Dec 31):**
+    - MINNOW and SMALL tiers added;
+    - payoff watch and post-call lender-criteria capture on;
+    - LenderFlow pilot reviewed for commercial launch.
+- **Success bar:** **20 active lenders** and **10 deals funded** by
+  **December 31, 2026**. Both come from records, each with a source. **Judge:**
+  you. **Decision meeting:** Monday, January 4, 2027, with this section re-read
+  word for word.
+- **Hard floors, not targets:**
+  - zero wires to a non-escrow payee;
+  - zero emails to an unsubscribed lender;
+  - outreach bounce rate under 3%.
 
-### Step 6: Before anyone else joins (December, or whenever it happens)
+### Step 6: Before anyone else joins
 
-- Write `company/decision-rights.md`: who may quote terms, who confirms
-  Funded, who sees Restricted data.
-- A new person gets their own login and their own connections; no shared
-  credentials.
-- Add them only after a working month, not into setup.
-- If it's a capital partner or investor seeing results, give them a report,
-  not access to the graph.
+`company/decision-rights.md`; a separate login and connections per person; a
+working month first. LenderFlow staff roles follow its own role table.
 
 ### Step 7: DIBS, gated
 
-DIBS stays out of the deal graph until you write
-`domains/dibs/README.md`: what it is, who may see it, and whether it touches
-borrower money. Until then it is excluded by label and by sender (step 2).
+Unchanged. It's excluded until `domains/dibs/README.md` exists.
 
 ---
 
 ## 8. What stays yours
 
-- **This repo is the authoring environment.** Rules, definitions, decision
-  records and skill prompts are written and versioned here in git and edited
-  in Claude Code. On the Day AI path they're deployed from here over MCP; they
-  don't move anywhere else.
-- **Your judgment.** Agents draft; you send. Agents flag; you decide. No agent
-  moves money, ever.
-- **Gmail stays your inbox.** Nothing about how you email changes.
-- **Your cross-AI threads.** Notes you keep in other AI tools stay where they
-  are. Bring a decision into the brain by writing a dated decision record
-  here. That keeps the brain's "current rule" in one place.
-- **Sunset on the Day AI path:** any interim `deals/*.md` files or Google
-  Sheet tracker from the DIY crawl. Nothing else, because nothing else exists
-  yet to sunset.
+- **This repo is the authoring environment.** Rules, stages, decision records
+  and skill prompts are written and versioned here.
+- **LenderFlow is your product.** Its code syncs to GitHub per its spec. The
+  brain reads its events; it doesn't own the portal.
+- **The lender list and your lender relationships.** Kept in the brain as
+  Confidential, never in git.
+- **Your judgment.** Agents send only approved first-touch outreach under 0002.
+  Everything else is a draft you send. No agent ever moves money.
+- **Sunset on the Day AI path:** any interim `deals/` or `lenders/` files or
+  Sheets from the DIY crawl.
 
 ---
 
@@ -556,6 +611,8 @@ borrower money. Until then it is excluded by label and by sender (step 2).
   your agent.
 - **Later:** each agent deployed to a teammate is a subscription change with
   its own cost. Humans, data and chat are free; agents are what you pay for.
+- **Not included either way:** the outreach sending tool and its domain, and
+  LenderFlow's Lovable hosting (per its spec, from $25/month).
 - **Coupon code `UPGRADEMYBRAIN`:** apply it at checkout at
   [day.ai/login](https://day.ai/login) for one month of the Professional Agent
   free, so month one is $0. It's a credit, not a trial; the card is charged
@@ -567,8 +624,9 @@ borrower money. Until then it is excluded by label and by sender (step 2).
    `UPGRADEMYBRAIN`.
 2. **Come back to this repo in Claude Code and say so.** The Day AI MCP gets
    connected from this folder, this document is re-read, and section 7 is
-   built step by step with your approval at each write, starting with the
-   rules (step 1) and the privacy rules (step 2) *before* Gmail is connected.
+   built step by step with your approval at each write. The privacy and
+   outreach rules (step 2) go in before Gmail is connected or any email is
+   sent.
 
 Help: **support@day.ai** · Demo or consultation:
 [day.ai/get-started](https://day.ai/get-started)
@@ -579,37 +637,37 @@ Help: **support@day.ai** · Demo or consultation:
 
 **To answer:**
 
-1. **"Lender-facing":** does Cornerstone lend directly to borrowers, or does
-   it mainly face capital partners and lenders? The plan treats borrower and
-   escrow threads as core data either way. If capital partners fund the loans,
-   add a `domains/capital-partners/` layer and a monthly partner report.
-2. **Baseline:** how many deals have been funded to date, and in the last 90
-   days? The pace of 10 in 90 days (about 0.8 per week) needs a starting point
-   to judge against.
-3. **Call mix:** roughly how many deal calls per week, and how many are phone
-   versus video?
-4. **Current terms:** rate, points, maximum and term for EMD and gap loans,
-   for `company/products.md`.
-5. **DIBS:** what it is and whether it's in scope. If it's software, run the
-   product and engineering evaluation for it.
-6. **Cross-AI notes (ThreadWeaver / RubyVox):** in scope as a source or not?
-   This wasn't answered in the evaluation. The default in this plan is out of
-   scope, with decisions brought in as dated records.
-7. **Compliance review:** state licensing, usury limits and recordkeeping
-   requirements for business-purpose EMD and gap loans are outside this
-   evaluation. Have counsel confirm before borrower data retention rules are
-   finalized.
+1. **Approve `lender-stages.md`,** especially the definition of "active"
+   (qualified plus capital confirmed within 60 days).
+2. **`pnw` column:** what does "YES" mean on 12 lenders (proof of net worth?
+   personal net worth?), and does it affect outreach order?
+3. **How lender money moves:** does PML capital wire straight to escrow, or
+   through Cornerstone first? Rule 1 covers disbursement to the deal either
+   way. This changes how "Funded a deal" is confirmed.
+4. **`list_number` column:** what do the values 2–8 mean (source list, batch)?
+5. **Current terms** for EMD and gap loans (`company/products.md`).
+6. **Baseline counts:** deals funded to date, and lenders already active
+   today.
+7. **Escrow and title domains; personal contacts to exclude** (PR #3).
+8. **Counsel:**
+   - record retention after payoff;
+   - state licensing and usury for business-purpose EMD and gap loans;
+   - CAN-SPAM and state rules for lender outreach;
+   - whether lender outreach touches securities rules (raising capital from
+     individuals). Confirm before the first automated send.
+9. **LenderFlow commercial launch:** the spec targets Texas lenders. Is
+   Cornerstone in Texas? When does the pilot become a product?
+10. **DIBS:** what it is and whether it's in scope.
 
 **To verify in a Day AI demo** (these come from Day AI's own materials and
 were not independently tested):
 
-- Exclusion controls by label and attachment for borrower ID and bank
-  documents.
-- Handling of PDF attachments (title commitments, wire letters) for the
-  Rule 1 check.
-- Recorder coverage for phone calls versus Meet/Zoom, and consent handling in
+- Whether Day AI sends bulk outbound sequences (the plan assumes not).
+- An inbound API or webhook for creating and updating opportunities from
+  LenderFlow; idempotency.
+- Exclusion controls by label and attachment for Regulated documents.
+- Recorder coverage for phone calls versus video calls; consent handling in
   your state.
-- Whether a skill can trigger on an incoming email matching a pattern (needed
-  for `wire-instruction-check` to fire on arrival).
-- Export: whether you can take your deal records and transcripts out if you
-  leave.
+- Skill triggers on an incoming email from a contact in a given pipeline (for
+  `lender-reply-triage`).
+- Exporting lender and deal records if you leave.
