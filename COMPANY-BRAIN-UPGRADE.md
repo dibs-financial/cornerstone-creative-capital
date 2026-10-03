@@ -392,7 +392,8 @@ Create in this repo:
   commitment, payoff letter, "funded" (= wire received by escrow and
   confirmed), and DIBS (one line, pointing to its gated domain).
 - **`domains/lending/stages.md`**: the pipeline, each stage written as a brief
-  to a new hire. A *draft for your approval*, not a decision yet:
+  to a new hire. **Approved by the founder on 2026-10-03**; the record of
+  truth is `domains/lending/stages.md`:
 
   | Stage | Enters when | Leaves when | Goes stale after |
   | --- | --- | --- | --- |
@@ -408,7 +409,7 @@ Create in this repo:
   **Deals funded = deals that entered Funded this period.** That definition is
   the Monday number.
 
-**GATE:** you've read and approved `stages.md` and `0001`.
+**GATE:** you've read and approved `stages.md` (done, 2026-10-03) and `0001` (written 2026-10-03; approved on merge of its PR).
 
 ### Step 2: Privacy rules, written before any source connects (Oct 7–8)
 

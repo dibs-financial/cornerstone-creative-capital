@@ -71,7 +71,7 @@ sources/canonical-sources.yaml   # where each fact's truth lives
   deal-record-keeper/
 ```
 
-## Deal stages (draft, pending founder approval)
+## Deal stages (approved 2026-10-03 — see `domains/lending/stages.md`)
 
 Inquiry → Docs → Underwriting → Terms accepted → **Escrow verified** →
 **Funded** → Paid off  · (Declined / Withdrawn from any stage)
