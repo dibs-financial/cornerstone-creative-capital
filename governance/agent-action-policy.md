@@ -23,7 +23,9 @@ prompt, a reply, or an email.
 2. **Change wire instructions** in any record, or confirm them. Escrow
    verification is a human callback (Rule 1, guardrail 2).
 3. **Send email unsupervised.** Every outbound message is a draft until the
-   founder sends it.
+   founder sends it. *Only exception:* lender outreach inside the limits of
+   `decisions/active/0002-lender-outreach-automated.md`, and only once that
+   record's status is `current`.
 4. **Quote or change terms** that are not in `company/products.md`, or make a
    commitment to a borrower.
 5. **Mark a deal Funded, Paid off, Declined, or Escrow verified** without the

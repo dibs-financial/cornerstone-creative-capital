@@ -432,7 +432,7 @@ Gates are marked **GATE**. Done items are marked ✓.
 - `BRAIN.md`, `CLAUDE.md`, `company/glossary.md` (add PML, active lender,
   tier, CALL FIRST).
 - `company/products.md`: current EMD and gap terms. **Needs your terms.**
-- **New: `domains/capital/lender-stages.md`.** A draft for your approval:
+- ✓ **`domains/capital/lender-stages.md`**: approved by the founder on 2026-10-03:
 
   | Stage | Enters when | Leaves when | Stale after |
   | --- | --- | --- | --- |
@@ -449,7 +449,7 @@ Gates are marked **GATE**. Done items are marked ✓.
 - **New: `domains/lenderflow/README.md`.** What LenderFlow is, the
   pilot-then-product plan, and the status mapping from section 5.
 
-**GATE:** you've approved `lender-stages.md`, including the definition of
+**GATE:** ✓ `lender-stages.md` approved 2026-10-03, including the definition of
 "active".
 
 ### Step 2: Privacy and outreach rules (before any source connects or any email is sent)
@@ -458,7 +458,7 @@ Gates are marked **GATE**. Done items are marked ✓.
   `agent-action-policy.md`), reviewed and merged. Still blank: escrow and
   title domains, personal contacts to exclude, retention after payoff
   (counsel). ✓ Answered: the vault is the LenderFlow private bucket.
-- **New: `decisions/active/0002-lender-outreach-automated.md`**, a narrow
+- **`decisions/active/0002-lender-outreach-automated.md`** (drafted 2026-10-03, pending approval), a narrow
   exception to "never send unsupervised":
   - **Scope:** first-touch and follow-up emails to the PML list only. Never
     to borrowers, escrow, title or anyone else. Replies to lenders stay drafts
