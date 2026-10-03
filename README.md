@@ -27,9 +27,10 @@ on the deal is a **stop**. No agent ever initiates, approves, or changes a wire.
 
 | | |
 | --- | --- |
-| **Target** | 10 deals funded, Oct 3 → Dec 31, 2026 |
-| **Measured by** | Deals entering the *Funded* stage (escrow confirms wire receipt) |
-| **Ritual** | Monday deal review, 8:00 CT, off an agent briefing — starts Oct 12, 2026 |
+| **Target 1 (first priority)** | 20 active lenders from the PML network by Dec 31, 2026 |
+| **Target 2** | 10 deals funded by Dec 31, 2026, each matched to its lender |
+| **Measured by** | Lenders in *Active* / *Funded a deal*; deals entering *Funded* (escrow confirms receipt) |
+| **Ritual** | Monday review, 8:00 CT: capital first, then deals. Starts Oct 12, 2026 |
 | **Judge / date** | Founder · Monday, Jan 4, 2027 |
 | **Access** | Founder-only until written access rules exist |
 
